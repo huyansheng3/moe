@@ -11,7 +11,19 @@
 // ==/UserScript==
 
 (function () {
+  function tag() {
+    const $tip = $("<div id='moe-tip'>自动刷课插件运行中～</div>").css({
+      position: 'absolute',
+      left: '20px',
+      top: '20px',
+      background: '#FFF',
+      padding: '4px',
+    });
+    $('body').append($tip);
+  }
+
   function init() {
+    tag();
     console.log('init');
 
     const videoList = Array.from(
@@ -72,10 +84,10 @@
         next();
       }
     }, 60 * 1000);
-
   }
 
   function list() {
+    tag();
     console.log('list');
     document.querySelector('.public-head-top #s1')?.click();
     setTimeout(() => {
