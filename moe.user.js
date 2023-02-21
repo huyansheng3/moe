@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         自动刷课
 // @namespace    http://tampermonkey.net/
-// @version      0.6
+// @version      0.7
 // @description  此脚本仅适用于 e-learning.moe.edu.cn 这个网址
 // @author       huyansheng
 // @match        https://e-learning.moe.edu.cn/*
