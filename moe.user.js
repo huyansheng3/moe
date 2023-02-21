@@ -11,14 +11,15 @@
 // ==/UserScript==
 
 (function () {
+
+  const $tip = $("<div id='moe-tip'>自动刷课插件运行中～</div>").css({
+    position: 'absolute',
+    left: '20px',
+    top: '20px',
+    background: '#FFF',
+    padding: '4px',
+  });
   function tag() {
-    const $tip = $("<div id='moe-tip'>自动刷课插件运行中～</div>").css({
-      position: 'absolute',
-      left: '20px',
-      top: '20px',
-      background: '#FFF',
-      padding: '4px',
-    });
     $('body').append($tip);
   }
 
@@ -39,18 +40,23 @@
 
     const video = document.querySelector('video');
 
-    setTimeout(() => {
-      if (document.querySelector('video').paused) {
-        console.log('自动播放');
-        $('.xgplayer-icon-play').trigger('click');
-      }
-    }, 1000);
-
     setInterval(() => {
       if (document.querySelector('video').paused) {
-        document.querySelector('video').play();
+        console.log('自动播放');
+        // 设置静音支持自动播放
+        document.querySelector('video').muted = true;
+        document
+          .querySelector('video')
+          .play()
+          .then(() => {
+            $tip.text('自动刷课插件运行中～~~，视频自动播放成功')
+            console.log('自动播放成功');
+          })
+          .catch((error) => {
+            console.log('自动播放失败', error);
+          });
       }
-    }, 4000);
+    }, 2000);
 
     // 返回列表页面
     const jumpToList = () => {
@@ -101,12 +107,15 @@
   }
 
   $(document).ready(function () {
-    if (location.pathname === '/syllabus/syllabus.php' && location.search.indexOf('projectid') !== -1) {
+    if (
+      location.pathname === '/syllabus/syllabus.php' &&
+      location.search.indexOf('projectid') !== -1
+    ) {
       list();
     } else if (location.pathname === '/program/program.php') {
       init();
     } else {
-      alert('请选择具体的项目学习')
+      alert('请选择具体的项目学习');
     }
   });
 })();
