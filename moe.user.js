@@ -82,13 +82,12 @@
     };
 
     // 或者检查进度结束切到下一个
-
     setInterval(() => {
       const text = document.querySelector('.layui-progress-text').textContent;
       if (parseInt(text) === 100) {
         next();
       }
-    }, 60 * 1000);
+    }, 20 * 1000);
   }
 
   function list() {
