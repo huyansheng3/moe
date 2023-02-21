@@ -11,7 +11,6 @@
 // ==/UserScript==
 
 (function () {
-
   const $tip = $("<div id='moe-tip'>自动刷课插件运行中～</div>").css({
     position: 'absolute',
     left: '20px',
@@ -49,7 +48,7 @@
           .querySelector('video')
           .play()
           .then(() => {
-            $tip.text('自动刷课插件运行中～~~，视频自动播放成功')
+            $tip.text('自动刷课插件运行中～~~，视频自动播放成功');
             console.log('自动播放成功');
           })
           .catch((error) => {
@@ -114,7 +113,10 @@
       list();
     } else if (location.pathname === '/program/program.php') {
       init();
-    } else {
+    } else if (
+      location.pathname === '/syllabus/syllabus.php' &&
+      location.search.indexOf('showProjectList') !== -1
+    ) {
       alert('请选择具体的项目学习');
     }
   });
