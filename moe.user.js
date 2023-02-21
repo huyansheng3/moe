@@ -101,10 +101,12 @@
   }
 
   $(document).ready(function () {
-    if (location.pathname === '/syllabus/syllabus.php') {
+    if (location.pathname === '/syllabus/syllabus.php' && location.search.indexOf('projectid') !== -1) {
       list();
     } else if (location.pathname === '/program/program.php') {
       init();
+    } else {
+      alert('请选择具体的项目学习')
     }
   });
 })();
