@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>教育部直属机关干部网络学院</title>
+    <link rel="stylesheet" type="text/css" href="https://e-learning.moe.edu.cn/statics/revision/css/rest.css" />
+    <link rel="stylesheet" type="text/css" href="https://e-learning.moe.edu.cn/statics/revision/css/public.css" />
+    <link rel="stylesheet" type="text/css" href="https://e-learning.moe.edu.cn/statics/revision/font/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="https://e-learning.moe.edu.cn/statics/revision/layui/css/layui.css" />
+    <script src="https://e-learning.moe.edu.cn/statics/revision/js/jquery1.12.1.min.js"></script>
+    <script src="https://e-learning.moe.edu.cn/statics/revision/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <div class="headlogoPage">
+            <div class="layout clearfix">
+
+                <div class="headlogoPage-top clearfix">
+                    <div class="headlogoPage-left">
+                        <img src="https://e-learning.moe.edu.cn/statics/revision/images/learning_logo.png">
+                     </div>
+                    <div class="headlogoPage-right">
+                        <p class="top-title">教育部直属机关干部网络学院</p>
+                        <p class="top-link">https://e-learning.moe.edu.cn</p>
+                    </div>
+                </div>
+
+                <div class="headlogoPage-search">
+                    <div class="search-box clearfix">
+                       <form  method="">
+                                <input name="keywords" id="keywords" type="text" class="search-input" value="" placeholder="请输入搜索内容">
+                                <input type="button" name="imageField" value="搜索" id="imageField" class="btn-search">
+                                <i class="sarch-icon"><img src="/statics/revision/images/pagescrach_icon.png"></i>
+                            </form>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="headnav clearfix">
+            <div class="layout">
+                <ul class="clearfix">
+                        <li>
+                            <a href="/">首页</a>
+                        </li>
+                        <li id="wyxx">
+                            <a href="/syllabus/syllabus.php?act=showProjectList">我要学习</a>
+                        </li>
+                        <li id="xxbm">
+                            <a href="/sign/sign.php">选学报名</a>
+                        </li>
+                        <li id="xfgl">
+                            <a href="/srecord/record.php">学分管理</a>
+                        </li>
+                        <li>
+                            <a href="/program/program.php?act=showIndex">课程资源</a>
+                        </li>
+                        <li>
+                            <a href="https://www.enaea.edu.cn/sztsg/" target="_blank">数字图书馆</a>
+                        </li>
+                    </ul>
+                <div class="header-learning">
+                    <a href="/">
+                        <img src="https://e-learning.moe.edu.cn/statics/revision/images/learningRe_icon.png">
+                        返回首页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 头部end -->
+<link rel="stylesheet" type="text/css" href="https://e-learning.moe.edu.cn/statics/revision/css/personal/perCommunal.css" />
+<link rel="stylesheet" type="text/css" href="https://e-learning.moe.edu.cn/statics/revision/css/personal/video.css" />
+<div class="content">
+    <div class="layout">
+        <div class="video-wrap clearfix">
+            <div class="video-wrap-hd">
+                <div class="video-container top">
+                    <div class="wrap-l" id="vedioPlay"></div>
+                </div>
+                <div class="video-info bottom">
+                    <h1 class="title" title="新时代的中国与世界——中国和平发展面临的国际局势与战略应对">新时代的中国与世界——中国和平发展面临的国际局势与战略应对</h1>
+                    <div class="sub-title">
+                        <span>主讲人：江瑞平</span>
+                        <span>课程时长：105分钟</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-wrap-bd">
+                <div class="video-episode top">
+                    <h3>分集播放</h3>
+                    <div id="course-number" class="course-number clearfix">
+                        <span class="active episode">1</span><span class="episode" onclick="javascript:window.location.href='program.php?programid=2934&volumeId=2'">2</span><span class="episode" onclick="javascript:window.location.href='program.php?programid=2934&volumeId=3'">3</span><span class="episode" onclick="javascript:window.location.href='program.php?programid=2934&volumeId=4'">4</span><span class="episode" onclick="javascript:window.location.href='program.php?programid=2934&volumeId=5'">5</span><span class="episode" onclick="javascript:window.location.href='program.php?programid=2934&volumeId=6'">6</span><span class="episode" onclick="javascript:window.location.href='program.php?programid=2934&volumeId=7'">7</span>
+                    </div>
+                </div>
+                <div class="video-function bottom clearfix">
+                    <div class="video-function-hd">
+                        <div>
+                            <span class="tips">本集学习进度</span>
+                            <div class="layui-progress" lay-showpercent="true" lay-filter="demo">
+                                <div class="layui-progress-bar" lay-percent="100%"></div>
+                            </div>
+                        </div>
+                        <div class="btn-wrap">
+                                                                                    <a class="btn btn-normal" href="javascript:;">本集观看完毕</a>
+                                                                                </div>
+                    </div>
+                    <div class="video-function-bd">
+                        <div class="wrap">
+                            <div class="icon iconfont" onclick="vote();" style="color: #FF8E7A;">&#xe7f9;</div>
+                            <div class="number"><span id="vote_number">0</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="course-wrap">
+            <div class="course-info">
+
+                <div style="display: none;">
+                    <hr>
+                    一些参数
+                    <h2 id="progress"></h2>
+                    <br>
+                    isSave:1
+                    <br>
+                    isOver:0
+                    <br>
+                    isSOver:1
+                    <br>
+                    <div style="width:110px;float:left" id="courcetag" name="courcetag">
+                                                                                <!-- 本集观看完毕 == menu_bjwb -->
+                            <input type="image" src="/statics/img/menu_bjwb.jpg" id="closesave" onclick="return false;">
+                                                                        </div>
+                    <hr>
+                </div>
+
+                <p align="center">
+	<strong><span style="font-size:18px;">新时代的中国与世界</span></strong>
+</p>
+<p align="center">
+	——中国和平发展面临的国际局势与战略应对
+</p>
+<p align="center">
+	主讲人：江瑞平
+</p>
+<p>
+	<strong>主讲人简介</strong>
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 江瑞平，外交学院教授、博导、原副院长，中国（海南）改革发展研究院副院长，商务部经贸政策咨询委员会委员。
+</p>
+<p>
+	<strong>课程简介</strong>
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 党的二十大报告指出：“中国始终坚持维护世界和平、促进共同发展的外交政策宗旨，致力于推动构建人类命运共同体。”本课程中，主讲人通过六个“局”，深入解读了美国的霸权主义政策，深刻剖析了当前国际形势，特别是一些热点问题，进而阐明了我国始终坚持走和平发展道路，积极参与全球治理体系改革和建设。他指出，面对复杂的大国关系、周边国家关系等，我国将继续推动构建人类命运共同体，努力实现中国与世界共同繁荣发展。
+</p>
+<p>
+	<strong>课程时长</strong>
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 105分钟
+</p>
+<p>
+	<strong>课程提纲</strong>
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、突破大国冲突危局
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、摆脱全球治理僵局
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 三、走出周边秩序困局
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 四、扭转地缘开放乱局
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 五、关注俄乌冲突战局
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 六、统筹安全发展全局
+</p>
+            </div>
+            <div class="course-tips">
+                <h5>学习提示</h5>
+                <ul>
+                    <li>1.视频播放常见问题<a href="/project/pxxm_lb.php?act=showContentList&articleid=3075" target="_blank">点击查看</a></li>
+                    <li>2.请点击“添加备选课程”按钮，加入到相应的学习项目。</li>
+                    <li>3.停止学习或学完每集课程后请务必点击“记录当前学时”按钮，否则系统将无法保存已学课时记录。</li>
+                    <li>4.视频课程以“集”为单位计时，每集时长即该集计时上限，一集课程累积学习时间达该集时长，系统将不予继续记录</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 底部 -->
+   <!-- 底部 -->
+    <div class="footer">
+        <div class="info-wrap">
+            <div>
+                <span style="margin-right: 30px;">主办单位：
+                    <a href="http://www.moe.gov.cn/s78/A04/" target="_blank">教育部人事司</a>
+                </span>
+                <span>协办单位：
+                <a href="https://www.naea.edu.cn/" target="_blank">国家教育行政学院</a>
+                </span>
+            </div>
+            <div>
+                <span>技术支持：
+                <a  href="https://www.guorent.com/" target="_blank">北京国人通教育科技有限公司</a>
+                </span>
+                <span style="margin: 0 10px 0 20px;">｜</span>
+                <a href="https://beian.miit.gov.cn" target="_blank">京ICP备10028400号</a>
+            </div>
+            <div>
+                <span style="margin-right: 10px;">邮箱：jgwy@naea.edu.cn</span>
+                <span>电话：69248888-3128</span>
+                <span style="margin: 0 15px 0 10px;">｜</span>
+                
+                <script>
+                    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                    document.write(unescape("%3Cspan id='cnzz_stat_icon_1000505736'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1000505736' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+                
+            </div>
+        </div>
+
+    </div>
+    <!-- 底部end --><!-- 底部end -->
+<!-- 课程未加入项目弹窗 -->
+<div id="join-project" class="join-project" style="display: none;">
+    <p class="dialog-title">新时代的中国与世界——中国和平发展面临的国际局势与战略应对 详情</p>
+    <ul>
+                <li class="item-wrap clearfix unbind-project" data-id="369">
+            <div class="item-hd">
+                <p class="item-title">教育部机关干部学习贯彻党的二十大精神网络专题班</p>
+                <p class="item-info">项目时间：2023-01-13至2023-06-30</p>
+            </div>
+            <div class="item-bd">
+                <i class="layui-icon layui-icon-ok"></i>
+            </div>
+        </li>
+            </ul>
+</div>
+<!-- 课程未加入项目弹窗end -->
+<!-- 暂未报名项目弹窗 -->
+<div id="no-project" class="join-project" style="display: none;">
+    <p class="dialog-title">即将播放的课程，需要加入到您某个项目中才能正常播放和记时</p>
+    <div class="no-data">
+        <div class="img"><img src="https://e-learning.moe.edu.cn/statics/revision/images/icon-nodata.png" alt=""></div>
+        <p>暂未报名项目</p>
+    </div>
+</div>
+<!-- 暂未报名项目弹窗end -->
+<!-- 弹窗结构 -->
+<div class="studyTip-box" style="display: none;">
+    <div class="studyTip">
+        <p id="studyTipMsg"></p>
+    </div>
+</div>
+<!-- 弹窗end -->
+<!-- useful begin -->
+<input type="hidden" name="projectid" id="projectid" value="0">
+<input type="hidden" name="programid" id="programid" value="2934">
+<input type="hidden" name="isShow" id="isShow" value="0">
+<input type="hidden" name="isSave" id="isSave" value="1">
+<input type="hidden" name="isOver" id="isOver" value="0">
+<input type="hidden" name="isSOver" id="isSOver" value="1">
+<input type="hidden" name="flushlast" id="flushlast" value="0">
+<input type="hidden" name="volumeId" id="volumeId" value="1">
+<!-- useful end -->
+
+<!-- useless -->
+<!-- <input type="hidden" name="watchedtimeeffect" id="watchedtimeeffect" value=""> -->
+<!-- <input type="hidden" name="starttime" id="starttime" value=""> -->
+<!-- <input type="hidden" name="token" value="" /> -->
+<!-- <input type="hidden" name="filepath" id="filepath" value=""> -->
+<!-- <input type="hidden" name="filepath" id="mp4path" value=""> -->
+<!-- <input type="hidden" name="ccid" id="ccid" value=""> -->
+<!-- useless -->
+
+<script src="https://e-learning.moe.edu.cn/statics/revision/js/jquery1.12.1.min.js"></script>
+<script src="https://e-learning.moe.edu.cn/statics/revision/js/jquery.SuperSlide.2.1.1.js"></script>
+
+<script src="https://cdn1.100cdw.com.cn/common/grtPlayer.1.1.1.js"></script>
+<script src="https://e-learning.moe.edu.cn/statics/revision/hw/base64.js"></script>
+<script src="https://e-learning.moe.edu.cn/statics/revision/hw/hw_video.js"></script>
+
+<script type="text/javascript">
+var API_URL = "https://e-api.ttcdw.cn/";
+var video_host = "https://videocenter.guorent.com/";
+var video_handle_path = "https://vod.grtcloud.net/asset/4528734bcca61190544b64f5cfb413eb/play_video/d36627d61919add6fe2d9403bafa1504.m3u8";
+var video_last_play_time_old = "299";
+var video_last_play_time_new = "46";
+var continuation_key = "continuation_52e4015b89b9da03a8c0240e6628b4ed";
+var video_time_length = "300";
+var user_id = "7802";
+var episode_id = "9912";
+
+var global_plan;
+</script>
+
+<script type="text/javascript">
+// 视频对象
+var player;
+
+$(function() {
+    var layer = null;
+    var element = null;
+    // 进度条需要使用
+    layui.use('element', function() {
+        element = layui.element;
+    });
+    layui.use('layer', function() {
+        layer = layui.layer;
+    });
+
+    var jump_pid = $("#projectid").val();
+    if (jump_pid && jump_pid != '0') {
+        localStorage.setItem('jump_pid', jump_pid);
+    }
+
+    // 断点续播
+    // 按优先级选择断点续播的方式
+    var ls_video_last_play_time = localStorage.getItem(continuation_key);
+    var video_last_play_time = 0;
+    if (video_last_play_time_new) {
+        console.log('已使用新版本断点续播');
+        video_last_play_time = video_last_play_time_new;
+    } else if (ls_video_last_play_time) {
+        video_last_play_time = ls_video_last_play_time;
+    } else {
+        video_last_play_time = video_last_play_time_old;
+    }
+
+    // 后台获取视频时长，对比缓存记录时长
+    video_last_play_time = parseInt(video_last_play_time);
+    video_time_length = parseInt(video_time_length);
+    video_last_play_time = (video_last_play_time >= video_time_length) ? 0 : video_last_play_time;
+
+    // 华为视频播放 begin
+    var option = {
+        id: "vedioPlay",
+        url: video_handle_path,
+        width: "100%",
+        height: 537,
+        poster: '', // 封面
+        closeInactive: false, // 使播放器控制栏常驻不隐藏
+        lastPlayTime: video_last_play_time, //视频起播时间（单位：秒）
+        lastPlayTimeHideDelay: 5, // 提示文字展示时长（单位：秒）
+        video_host: video_host,
+        countTime: {
+            interval: 5,
+            cb: function(object){
+                // console.log(object.time);
+                localStorage.setItem(continuation_key, object.time);
+                playRecord(object.time);
+            }
+        }
+    };
+
+    // 视频初始化
+    videoPlayer(option);
+
+    // 视频播放完后回调函数
+    player.on('ended', function() {
+        console.log("on_player_ended");
+        $(".episode").each(function(index, item) {
+            if ($(this).hasClass('active')) {
+                var $next = $(this).next();
+                if ($next.length == 0) {
+                    layer.open({
+                        skin: 'search-dialog',
+                        type: 1,
+                        closeBtn: 1,
+                        shadeClose: false,
+                        scrollbar: false,
+                        title: '提示',
+                        offset: 'auto',
+                        area: ['500px', '240px'],
+                        resize: false,
+                        content: "该课程已学完",
+                        btn: ['返回课程列表'],
+                        btnAlign: "c",
+                        yes: function(index, layero) {
+                            var exist_jump_pid = localStorage.getItem('jump_pid');
+                            if (exist_jump_pid && exist_jump_pid != '0') {
+                                window.location.href = '/syllabus/syllabus.php?projectid=' + exist_jump_pid;
+                            } else {
+                                window.location.href = '/program/program.php?act=showIndex';
+                            }
+                        }
+                    });
+                } else {
+                    isContinuePlayer($next);
+                }
+            }
+        });
+        doFlushTime();
+    });
+
+    // 点击播放按钮回调
+    player.on('play', function() {
+        console.log("on_player_play");
+        var flushtime = $("#flushlast").val() * 60 * 1000;
+        var isSave = $('#isSave').val();
+        var isOver = $('#isOver').val();
+        var isSOver = $('#isSOver').val();
+        if (isSave == 1 && isOver == 0 && isSOver == 0) {
+            if (!global_plan) {
+                console.log('开始计时', getNowTime(), global_plan);
+                init(1);
+                global_plan = setTimeout('doFlushTime()', flushtime);
+            }
+        }
+    });
+
+    // 点击暂停按钮回
+    player.on('pause', function() {
+        console.log("on_player_pause");
+        if (global_plan) {
+            console.log('关闭计时', getNowTime(), global_plan);
+            clearInterval(global_plan);
+            global_plan = null;
+            doFlushTime();
+            init(2);
+        }
+    });
+
+    // 自动播放
+    var is_save = $('#isSave').val();
+    if (is_save == 1 || is_save == 2) {
+        player.once('ready',()=>{
+            console.log('ready');
+            $('.xgplayer-icon-play').trigger('click');
+        });
+    }
+
+    // player.onTimeUpdate = function(time) {
+    //     console.log(time);
+    // }
+
+    // player.on('canplay', function() {
+    //     console.log('canplay');
+    // });
+    // 华为视频播放 end
+
+    // 自动判断是否开始学习
+    setTimeout(function() {
+        // this is normal and
+        var is_auto = $('#isSave').val();
+        if (is_auto != 1 && is_auto != 2) {
+            $("#studyTipMsg").html('是否开始学习？');
+            layer.open({
+                skin: 'confirm-dialog',
+                type: 1,
+                closeBtn: 1,
+                shadeClose: false,
+                scrollbar: false,
+                title: '重要提示',
+                offset: 'auto',
+                area: ['500px', '240px'],
+                resize: false,
+                content: $(".studyTip-box"),
+                btnAlign: "c",
+                btn: ['确定', '取消'],
+                yes: function(index, layero) {
+                    layer.close(index);
+                    setTimeout(function(){
+                        bindProject();
+                    }, 500);
+                },
+                end: function() {
+                }
+            });
+        }
+    }, 500);
+});
+
+// init
+function init(type) {
+    // return 1;
+    var url = "/program/program.php?act=doTemp";
+    var data = "random=" + Math.random();
+    $.ajax({
+        type: "GET",
+        url: url,
+        data: {
+            'programid': $("#programid").val(),
+            'projectid': $("#projectid").val(),
+            'volumeId': $("#volumeId").val(),
+            'type': type
+        },
+        success: function(response) {
+            console.log(response);
+        }
+    });
+}
+
+// save time
+function saveTime() {
+    doFlushTime(true);
+}
+
+// auto flush time
+var times = 0;
+function doFlushTime(flag = false) {
+    times += 1;
+    console.log('计时时间：', getNowTime(), '计时次数：', times);
+    var programid = $('#programid').val();
+    var url = "/program/program.php?act=doFlush";
+    var data = "random=" + Math.random();
+    $.ajax({
+        type: "GET",
+        url: url,
+        data: data,
+        timeout: 10000,
+        dataType: "json",
+        success: function(response) {
+            if (flag) {
+                layer.msg("已记录当前学时", { time: 2000 }, function() {
+                    location.reload();
+                });
+                return;
+            }
+            console.log(response);
+            // 未完结则继续计时
+            if (response.precent) {
+                layui.use('element', function() {
+                    layui.element.progress('demo', response.precent + '%');
+                });
+            }
+            if (response.isover == 0 && response.flushlast > 0) {
+                if (global_plan) {
+                    global_plan = setTimeout('doFlushTime()', response.flushlast * 1000);
+                } else {
+                    console.log('暂停模式临时计时');
+                }
+            } else if (response.isover == 1) {
+                // 课程结束
+            } else if (response.isover == 2) {
+                // 单集课程结束
+            }
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {}
+    });
+}
+
+// get now time
+var getNowTime = function() {
+    let dateTime;
+    let yy = new Date().getFullYear();
+    let mm = new Date().getMonth() + 1;
+    let dd = new Date().getDate();
+    let hh = new Date().getHours();
+    let mf = new Date().getMinutes() < 10 ? '0' + new Date().getMinutes() : new Date().getMinutes();
+    let ss = new Date().getSeconds() < 10 ? '0' + new Date().getSeconds() : new Date().getSeconds();
+    dateTime = yy + '-' + mm + '-' + dd + ' ' + hh + ':' + mf + ':' + ss;
+    // console.log(dateTime);
+    return dateTime;
+}
+
+// vote
+var isAllowTJ = true;
+
+function vote() {
+    var programid = $('#programid').val();
+    var urlpath = "/program/program.php?act=doVote";
+    var urlPar = "programid=" + programid + "&random=" + Math.random();
+    if (isAllowTJ) {
+        $.ajax({
+            type: "GET",
+            url: urlpath,
+            data: urlPar,
+            success: function(response) {
+                if (response > "0") {
+                    $("#vote_number").html(response);
+                    isAllowTJ = false;
+                } else if (response == 0) {
+                    layer.alert("推荐操作失败!");
+                }
+            },
+            error: function(data) {
+                alert(data.responseText);
+            }
+        });
+    } else {
+        layer.open({
+            skin: 'search-dialog',
+            type: 1,
+            closeBtn: 1,
+            shadeClose: false,
+            scrollbar: false,
+            title: '提示',
+            offset: 'auto',
+            area: ['500px', '240px'],
+            resize: false,
+            content: "不允许重复推荐！",
+            btnAlign: "c",
+            btn: ['确定'],
+            yes: function(index, layero) {
+                layer.close(index);
+            }
+        });
+    }
+}
+
+// bind project
+function bindProject() {
+    // project id
+    var projectid = document.getElementById('projectid').value;
+    // program id
+    var programid = document.getElementById('programid').value;
+    // this course unbind project & many projects
+    var flag = document.getElementById("isShow").value;
+    if (flag == 1) {
+        joinProject(programid);
+    } else {
+        if (projectid == 0) {
+            // 暂未报名项目弹窗  参数说明  content: $("#no-project")  btn: ['立即报名项目']
+            layer.open({
+                skin: 'confirm-dialog',
+                type: 1,
+                closeBtn: 1,
+                shadeClose: false,
+                scrollbar: false,
+                title: '加入项目',
+                offset: 'auto',
+                area: ['900px', '702px'],
+                resize: false,
+                content: $("#no-project"),
+                btn: ['立即报名项目'],
+                btnAlign: "c",
+                yes: function(index, layero) {
+                    location.href = "/sign/sign.php";
+                }
+            });
+        } else {
+            joinProject(programid);
+
+            // $("#studyTipMsg").html('<font>当前课件没有添加到选修课列表，您是否需要继续？<br><br>确定：加入选修课，并且学时计入选修学时<br>取消：不加入选修课并且继续播放，学时不计入选修课</font>');
+            // layer.open({
+            //     skin: 'confirm-dialog',
+            //     type: 1,
+            //     closeBtn: 1,
+            //     shadeClose: false,
+            //     scrollbar: false,
+            //     title: '重要提示',
+            //     offset: 'auto',
+            //     area: ['500px', '300px'],
+            //     resize: false,
+            //     content: $(".studyTip-box"),
+            //     btnAlign: "c",
+            //     btn: ['确定', '取消'],
+            //     yes: function(index, layero) {
+            //         binding(programid, projectid);
+            //     }
+            // });
+        }
+    }
+}
+
+// join project
+function joinProject(programid) {
+    // 为每个项目添加点击事件，点击即选中
+    // 这个事件仅 添加到项目 调用
+    $("#join-project").find(".item-wrap").on("click", function(e) {
+        $target = $(e.currentTarget);
+        if (!$target.hasClass('active')) {
+            $target.addClass('active');
+            $target.siblings().removeClass("active");
+        }
+    });
+    // 如果这个课程不在用户项目里，则弹窗提示用户将此课程添加入项目，参数说明  content: $("#join-project")  btn: ['添加到项目']
+    layer.open({
+        skin: 'confirm-dialog',
+        type: 1,
+        closeBtn: 1,
+        shadeClose: false,
+        scrollbar: false,
+        title: '加入项目',
+        offset: 'auto',
+        area: ['900px', '702px'],
+        resize: false,
+        content: $("#join-project"),
+        btn: ['添加到项目'],
+        btnAlign: "c",
+        yes: function(index, layero) {
+            var projectid = $(".unbind-project.active").data("id");
+            if (!projectid) {
+                layer.msg('请选择想要加入的项目！');
+                return;
+            }
+            binding(programid, projectid);
+        }
+    });
+}
+
+// bing action
+function binding(programid, projectid) {
+    layer.load(2);
+    var url = "/program/program.php?act=addElectiveAjax&programid=" + programid + "&projectid=" + projectid + "&tmp=" + Math.random();
+    $.getJSON(
+        url, { async: false },
+        function(response) {
+            layer.closeAll('loading');
+            if (!response.success) {
+                layer.msg(response.message);
+            } else {
+                layer.msg("加入成功", { time: 2000 }, function() {
+                    window.location.href = "/program/program.php?programid=" + programid + "&projectid=" + projectid;
+                });
+            }
+        }
+    );
+}
+
+// continue play
+function isContinuePlayer($next) {
+    layer.open({
+        skin: 'confirm-dialog',
+        type: 1,
+        closeBtn: 1,
+        shadeClose: false,
+        scrollbar: false,
+        title: '提示',
+        offset: 'auto',
+        area: ['500px', '240px'],
+        resize: false,
+        content: "<div class='center'>是否要继续播放课程？</div>",
+        btn: ['确定', '取消'],
+        btnAlign: "c",
+        yes: function(index, layero) {
+            // 点击确定
+            $next.click();
+            layer.close(index);
+        },
+        btn2: function() {}
+    });
+}
+
+// play record
+function playRecord(progress){
+    $.ajax({
+        type: "GET",
+        url: API_URL + "/api/breakpoint/record",
+        data: {
+            course_id: $('#programid').val(),
+            episode_id: episode_id,
+            user_id: user_id,
+            progress: progress
+        },
+        dataType: "jsonp",
+        success: function(response) {
+            if (response.success) {
+                // console.log(response);
+            } else {
+                console.error(response);
+            }
+        }
+    });
+}
+
+// 输出03:05:59 时分秒
+function secondToDate(result) {
+    var h = Math.floor(result / 3600) < 10 ? '0' + Math.floor(result / 3600) : Math.floor(result / 3600);
+    var m = Math.floor((result / 60 % 60)) < 10 ? '0' + Math.floor((result / 60 % 60)) : Math.floor((result / 60 % 60));
+    var s = Math.floor((result % 60)) < 10 ? '0' + Math.floor((result % 60)) : Math.floor((result % 60));
+    return result = h + ":" + m + ":" + s;
+}
+</script>
+
+</body>
+
+</html>

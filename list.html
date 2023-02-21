@@ -1,0 +1,1382 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>教育部直属机关干部网络学院</title>
+    <link rel="stylesheet" type="text/css" href="https://e-learning.moe.edu.cn/statics/revision/css/rest.css" />
+    <link rel="stylesheet" type="text/css" href="https://e-learning.moe.edu.cn/statics/revision/css/public.css" />
+    <link rel="stylesheet" type="text/css" href="https://e-learning.moe.edu.cn/statics/revision/font/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="https://e-learning.moe.edu.cn/statics/revision/layui/css/layui.css" />
+    <script src="https://e-learning.moe.edu.cn/statics/revision/js/jquery1.12.1.min.js"></script>
+    <script src="https://e-learning.moe.edu.cn/statics/revision/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <div class="headlogoPage">
+            <div class="layout clearfix">
+
+                <div class="headlogoPage-top clearfix">
+                    <div class="headlogoPage-left">
+                        <img src="https://e-learning.moe.edu.cn/statics/revision/images/learning_logo.png">
+                     </div>
+                    <div class="headlogoPage-right">
+                        <p class="top-title">教育部直属机关干部网络学院</p>
+                        <p class="top-link">https://e-learning.moe.edu.cn</p>
+                    </div>
+                </div>
+
+                <div class="headlogoPage-search">
+                    <div class="search-box clearfix">
+                       <form  method="">
+                                <input name="keywords" id="keywords" type="text" class="search-input" value="" placeholder="请输入搜索内容">
+                                <input type="button" name="imageField" value="搜索" id="imageField" class="btn-search">
+                                <i class="sarch-icon"><img src="/statics/revision/images/pagescrach_icon.png"></i>
+                            </form>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="headnav clearfix">
+            <div class="layout">
+                <ul class="clearfix">
+                        <li>
+                            <a href="/">首页</a>
+                        </li>
+                        <li id="wyxx">
+                            <a href="/syllabus/syllabus.php?act=showProjectList">我要学习</a>
+                        </li>
+                        <li id="xxbm">
+                            <a href="/sign/sign.php">选学报名</a>
+                        </li>
+                        <li id="xfgl">
+                            <a href="/srecord/record.php">学分管理</a>
+                        </li>
+                        <li>
+                            <a href="/program/program.php?act=showIndex">课程资源</a>
+                        </li>
+                        <li>
+                            <a href="https://www.enaea.edu.cn/sztsg/" target="_blank">数字图书馆</a>
+                        </li>
+                    </ul>
+                <div class="header-learning">
+                    <a href="/">
+                        <img src="https://e-learning.moe.edu.cn/statics/revision/images/learningRe_icon.png">
+                        返回首页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 头部end -->
+<link rel="stylesheet" type="text/css" href="https://e-learning.moe.edu.cn/statics/revision/css/personal/myStudyList.css" />
+<div class="content">
+    <div class="layout">
+        <div class="content-body clearfix">
+            <!-- 页面中间部分左部分 -->
+            <link rel="stylesheet" type="text/css" href="https://e-learning.moe.edu.cn/statics/revision/css/personal/perCommunal.css" />
+<div class="body-left">
+    <div class="personalItme-img">
+        <img src="https://e-learning.moe.edu.cn/statics/revision/images/learning_limg.png">
+    </div>
+    <div class="personalItme-body">
+        <div class="account-panel">
+            <div class="headPortrait">
+                                    <img src="https://e-learning.moe.edu.cn//statics/revision/images/defaultAvatar_img.png">
+                            </div>
+            <p class="panel-name">
+                <span>岳源</span>，欢迎您！
+            </p>
+            <p class="panel-info">
+                账号：<span>14240****2444</span>
+            </p>
+            <div class="panel-btn">
+                <a href="javascript:logout();" class="signOut">退出系统</a>
+                <a href="/xggrxx/xggrxx.php" class="modify-btn" target="_blank">修改个人信息</a>
+            </div>
+        </div>
+        <div class="list-nav">
+            <ul>
+                <li id ='person'>
+                    <a href="/srecord/personal.php">
+                        <i class="iconfont">&#xe7f4;</i>
+                        学习档案
+                    </a>
+                </li>
+                <li  id="syllabus">
+                    <a href="/syllabus/syllabus.php?act=showProjectList">
+                        <i class="iconfont">&#xe7f5;</i>
+                        我要学习
+                    </a>
+                </li>
+                <li  id="sign">
+                    <a href="javascript:abcd();">
+                        <i class="iconfont">&#xe7f6;</i>
+                        选学报名
+                    </a>
+                </li>
+                <li id="record">
+                    <a href="/srecord/record.php">
+                        <i class="iconfont">&#xe7f7;</i>
+                        学分管理
+                    </a>
+                </li>
+                <li  id="pxxg">
+                    <a href="/pxgg/pxgg.php">
+                        <i class="iconfont">&#xe7f8;</i>
+                        培训公告
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="dataDownload">
+            <div class="dataDownload-list">
+                <p class="dataDownload-title">学员下载</p>
+                <ul>
+                    <li>
+                        <a href="/project/pxxm_lb.php?act=showContentList&articleid=3277" target="_blank">
+                            <div class="clearfix">
+                                <img src="https://e-learning.moe.edu.cn/statics/revision/images/gr_xz_icon.png">
+                                <div class="text">干部选学操作手册</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/upload/download/jiaoyubujiguanganbujihuawaidengjibiao.docx" download="计划外培训学分登记申请表.docx">
+                            <div class="clearfix">
+                                <img src="https://e-learning.moe.edu.cn/statics/revision/images/gr_xz_icon.png">
+                                <div class="text">计划外培训学分登记申请表</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/upload/download/tiaokeshenqingbiao.doc" download="请假调课申请表.doc">
+                            <div class="clearfix">
+                                <img src="https://e-learning.moe.edu.cn/statics/revision/images/gr_xz_icon.png">
+                                <div class="text">请假调课申请表</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dataDownload-list">
+                <p class="dataDownload-title">管理员下载</p>
+                <ul>
+                    <li>
+                        <a href="/upload/download/inport_userinfo_add.xls" download="学员账号模板.xls">
+                            <div class="clearfix">
+                                <img src="https://e-learning.moe.edu.cn/statics/revision/images/gr_xz_icon.png">
+                                <div class="text">学员账号模板</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/upload/download/stat_recordper_import.xlsx" download="参训记录模板.xlsx">
+                            <div class="clearfix">
+                                <img src="https://e-learning.moe.edu.cn/statics/revision/images/gr_xz_icon.png">
+                                <div class="text">参训记录模板</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/upload/download/zhuantiyanxiubaomingcailiao.doc" download="专题研修报名材料.doc">
+                            <div class="clearfix">
+                                <img src="https://e-learning.moe.edu.cn/statics/revision/images/gr_xz_icon.png">
+                                <div class="text">专题研修报名材料</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 弹窗结构 -->
+<div class="logout-box" style="display: none;">
+    <div class="studyTip">
+        <p>您确定要退出系统吗？</p>
+    </div>
+</div>
+<!-- 弹窗end -->
+
+<script type="text/javascript">
+function logout() {
+
+    layer.open({
+        skin: 'confirm-dialog',
+        type: 1,
+        closeBtn: 1,
+        shadeClose: false,
+        scrollbar: false,
+        title: '提示',
+        offset: 'auto',
+        area: ['500px', '240px'],
+        resize: false,
+        content: $(".logout-box"),
+        btnAlign: "c",
+        btn: ['确定', '取消'],
+        yes: function(index, layero) {
+            $.ajax({
+                type: "GET",
+                url: '/index.php?act=doLoginoutAjax',
+                data: {},
+                success: function(response) {
+                    location.href="/";
+                },
+                error: function(data) {
+                    alert(data.responseText);
+                }
+            });
+        }
+    });
+}
+
+    function alert_temp() {
+        layer.open({
+            skin: 'search-dialog',
+            type: 1,
+            closeBtn: 1,
+            shadeClose: false,
+            scrollbar: false,
+            title: '提示',
+            offset: 'auto',
+            area: ['500px', '240px'],
+            resize: false,
+            content: "更新建设中，敬请期待。",
+            btnAlign: "c",
+            btn: ['确定'],
+            yes: function(index, layero) {
+                layer.close(index);
+            }
+        });
+    }
+
+
+
+function abcd() {
+    localStorage.setItem('ls_mode', '');
+    localStorage.setItem('ls_unit', '');
+    location.href = '/sign/sign.php';
+}
+
+
+
+
+        $("#imageField").on("click",function(){
+                    var keywords = $('#keywords').val();
+                    if(!keywords){
+                    layer.open({
+                        skin: 'search-dialog',
+                        type: 1,
+                        closeBtn: 1,
+                        shadeClose: false,
+                        scrollbar: false,
+                        title: '提示',
+                        offset: 'auto',
+                        area: ['500px', '240px'],
+                        resize: false,
+                        content: '搜索内容不能为空',
+                        btnAlign: "c",
+                        btn: ['知道了'],
+        })
+        return false;
+    }
+    window.location.href = '/search/search.php?keywords='+keywords+'&imageField=搜索';
+    })
+</script>
+
+            <!-- 页面中间部分左部分end -->
+            <!-- 页面中间部分右部分 -->
+            <div class="body-right ">
+                <div class="speed-body clearfix">
+                    <div class="speed-left">
+                        <h1 class="title">教育部机关干部学习贯彻党的二十大精神网络专题班</h1>
+                                                <div class="speed-box clearfix">
+                            <label>学习进度：</label>
+                            <div class="layui-progress" lay-showpercent="true">
+                                <div class="layui-progress-bar" lay-percent='7%'></div>
+                            </div>
+                            <div class="noComplete">
+                                要求24.00学时，已完成1.71学时
+                            </div>
+                        </div>
+                        
+                        <div class="my-info clearfix">
+                            <div class="my-info-hd">
+                                <span class="theme">已选 33.63 学时（2018分钟）课程时长</span>
+                                <span class="theme">已获得 1.71 学时</span>
+                                <span class="tips"><i class="iconfont">&#xe67c;</i>提示:总学时每日凌晨更新</span>
+                            </div>
+
+                                                    </div>
+                    </div>
+                    <div class="my-info clearfix">
+                        <div class="countDown-itme" id="cd">
+                            <!-- 距离结束还有<span class="countDown-num">10天</span> -->
+                        </div>
+                        <span id="add-course" class="my-info-bd">添加备选课程</span>
+                    </div>
+                </div>
+                <div class="splite-line"></div>
+
+                <div class="public-head-top">
+                    <ul class="clearfix">
+                        <!-- class="publichead-active" -->
+                        <li id="s1">
+                            未学习
+                        </li>
+                        <li id="s2">
+                           进行中
+                        </li>
+                        <li id="s3">
+                            已完成
+                         </li>
+                    </ul>
+                </div>
+
+                <table class="layui-table table">
+                    <thead>
+                        <tr>
+                            <th class="list-one">
+                                <div class="wrap">序号</div>
+                            </th>
+                            <th class="list-two">
+                                <div class="wrap">课程名称</div>
+                            </th>
+                            <th class="list-three">
+                                <div class="wrap">主讲人</div>
+                            </th>
+                            <th class="list-four">
+                                <div class="wrap">时长</div>
+                            </th>
+                            <th class="list-five">
+                                <div class="wrap">已学时长</div>
+                            </th>
+                            <th class="list-six">
+                                <div class="wrap">操作</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="box">
+                                                <tr class="study_status_3" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">1</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2934&projectid=369');">新时代的中国与世界——中国和平发展面临的国际局势与战略应对</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">江瑞平</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">105</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 105 -->
+                                    105分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" style="background-color: #999;">完成学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" style="cursor: inherit;vertical-align: -14px;"></a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">2</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2936&projectid=369');">认真学习和领会党的二十大通过的《中国共产党章程（修正案）》</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">陈凯龙</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">87</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2936&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2936,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_2" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">3</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2935&projectid=369');">坚定不移全面从严治党，深入推进新时代党的建设新的伟大工程</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">曹鹏飞</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">88</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 2 -->
+                                    2分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2935&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2935,369,2);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">4</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2949&projectid=369');">坚持和完善“一国两制”，推进祖国统一</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">朱卫东</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">73</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2949&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2949,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">5</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2950&projectid=369');">实现建军一百年奋斗目标，开创国防和军队现代化新局面</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">马德宝</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">87</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2950&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2950,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">6</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2940&projectid=369');">坚定不移贯彻总体国家安全观推进国家安全体系和能力现代化</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">李兵</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">94</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2940&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2940,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">7</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2939&projectid=369');">书写全面建设社会主义现代化国家崭新篇章——深入学习贯彻党的二十大精神</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">胡敏</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">83</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2939&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2939,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">8</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2953&projectid=369');">把握内在机理 坚持理论创新 不断推动马克思主义中国化时代化</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">董振华</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">107</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2953&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2953,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">9</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2948&projectid=369');">非凡十年——新时代十年伟大变革与经验</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">张旭东</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">104</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2948&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2948,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">10</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2945&projectid=369');">中国式现代化的中国特色、本质要求和必须牢牢把握的重大原则</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">辛向阳</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">89</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2945&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2945,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">11</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2952&projectid=369');">深入学习贯彻党的二十大精神 深刻把握 “两个确立” 坚决做到“两个维护”</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">顾海良</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">120</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2952&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2952,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">12</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2937&projectid=369');">如何深刻领会“两个结合”“六个坚持”</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">邓纯东</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">84</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2937&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2937,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">13</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2954&projectid=369');">践行新发展理念构建新发展格局 推动经济高质量发展</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">吴晓华</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">94</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2954&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2954,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">14</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2951&projectid=369');">坚持全面依法治国，推进法治中国建设</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">莫纪宏</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">114</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2951&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2951,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">15</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2946&projectid=369');">建立大教育观 推进科教兴国 建设教育强国</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">薛二勇</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">98</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2946&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2946,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">16</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2943&projectid=369');">实施科教兴国战略，强化现代化人才支撑</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">万劲波</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">114</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2943&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2943,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">17</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2947&projectid=369');">全面学习把握落实党的二十大精神</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">张力</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">102</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2947&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2947,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">18</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2942&projectid=369');">发展全过程人民民主，保障人民当家作主</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">李军鹏</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">116</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2942&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2942,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">19</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2941&projectid=369');">推动绿色发展，促进人与自然和谐共生</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">李宏伟</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">78</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2941&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2941,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">20</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2944&projectid=369');">推进文化自信自强，铸就社会主义文化新辉煌</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">王学斌</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">80</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2944&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2944,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                                <tr class="study_status_1" style="display: none;">
+                            <td class="list-one">
+                                <div class="wrap">21</div>
+                            </td>
+                            <td class="list-two">
+                                <div class="wrap"><a href="javascript:;" onclick="detail('/program/program.php?programid=2938&projectid=369');">增进民生福祉，提高人民生活品质</a></div>
+                            </td>
+                            <td class="list-three">
+                                <div class="wrap">丁元竹</div>
+                            </td>
+                            <td class="list-four">
+                                <div class="wrap">101</div>
+                            </td>
+                            <td class="list-five">
+                                <div class="wrap theme">
+                                    <!-- 0 -->
+                                    0分钟
+                                </div>
+                            </td>
+                            <td class="list-six">
+                                <div class="wrap">
+                                                                        <a href="javascript:;" class="btn btn-normal" onclick="detail('/program/program.php?programid=2938&projectid=369');">学习</a>
+                                    
+                                                                        <a href="javascript:;" class="btn btn-transparent" onclick="remove(2938,369,0);">删除</a>
+                                                                    </div>
+                            </td>
+                        </tr>
+                                            </tbody>
+                </table>
+            </div>
+            <!-- 页面中间部分右部分end -->
+        </div>
+    </div>
+</div>
+<!-- 底部 -->
+   <!-- 底部 -->
+    <div class="footer">
+        <div class="info-wrap">
+            <div>
+                <span style="margin-right: 30px;">主办单位：
+                    <a href="http://www.moe.gov.cn/s78/A04/" target="_blank">教育部人事司</a>
+                </span>
+                <span>协办单位：
+                <a href="https://www.naea.edu.cn/" target="_blank">国家教育行政学院</a>
+                </span>
+            </div>
+            <div>
+                <span>技术支持：
+                <a  href="https://www.guorent.com/" target="_blank">北京国人通教育科技有限公司</a>
+                </span>
+                <span style="margin: 0 10px 0 20px;">｜</span>
+                <a href="https://beian.miit.gov.cn" target="_blank">京ICP备10028400号</a>
+            </div>
+            <div>
+                <span style="margin-right: 10px;">邮箱：jgwy@naea.edu.cn</span>
+                <span>电话：69248888-3128</span>
+                <span style="margin: 0 15px 0 10px;">｜</span>
+                
+                <script>
+                    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                    document.write(unescape("%3Cspan id='cnzz_stat_icon_1000505736'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1000505736' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+                
+            </div>
+        </div>
+
+    </div>
+    <!-- 底部end --><!-- 底部end -->
+<!-- 添加备选课跳窗 -->
+<div id="add-course-dialog" class="add-course-dialog" style="display: none;">
+    <table class="layui-table table layui-form">
+        <thead>
+            <tr>
+                <th class="list-one">
+                    <div id="select-all" class="wrap"><i class="layui-icon layui-icon-ok"></i>课程名称</div>
+                </th>
+                <th class="list-two">
+                    <div class="wrap"></div>
+                </th>
+                <th class="list-three">
+                    <div class="wrap">主讲人</div>
+                </th>
+                <th class="list-four">
+                    <div class="wrap">课程时长</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="select-box">
+                        <tr>
+                <td class="list-one" colspan="9" style="text-align: center;">
+                    <div class="wrap" style="width: auto;">没有任何数据</div>
+                </td>
+            </tr>
+                    </tbody>
+    </table>
+</div>
+<!-- 添加备选课跳窗end -->
+<!-- 报名弹窗结构 -->
+<div class="studyTip-box" style="display: none;">
+    <div class="studyTip">
+        <p id="studyTipMsg"></p>
+    </div>
+</div>
+<!-- 报名end -->
+<!-- 新增培训通知飘窗 -->
+<div class="articleDetails" style="display: none;">
+    <div class="detail-wrap">
+        
+    </div>
+</div>
+<!-- 新增培训通知飘窗end -->
+<script src="https://e-learning.moe.edu.cn/statics/revision/js/jquery1.12.1.min.js"></script>
+<script src="https://e-learning.moe.edu.cn/statics/revision/js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="https://e-learning.moe.edu.cn/statics/revision/js/countDown.js"></script>
+<script type="text/javascript">
+var is_nece = "";
+var project_id = "369";
+var project_endtime = "1688140799";
+var c_time = "1676881263";
+var do_select_minute = '当前已选 33.63 学时（2018分钟）';
+
+// 特殊临时标识
+var flagp324 = "";
+var flagp324_status = "9";
+
+var wj_alert = "0";
+var wj_url = "";
+</script>
+
+<script type="text/javascript">
+$(function() {
+    $("#syllabus").addClass("list-cur");
+    $("#wyxx").addClass("active");
+    var layer = null;
+    layui.use('layer', function() {
+        layer = layui.layer;
+    });
+    layui.use('form', function() {
+        var form = layui.form;
+    });
+    layui.use('element', function() {
+    });
+
+    // 点击 添加备选课程
+    $("#add-course").on("click", function(e) {
+        insert();
+    });
+
+    // 点击 添加备选课程 弹窗里的勾选所有课程
+    $("#select-all").on("click", function(e) {
+        var $this = $(this);
+        var $selectAllDom = $this.find(".layui-icon");
+        var isChecked = $selectAllDom.hasClass("checked");
+        var $selectItem = $("#add-course-dialog").find("tbody .layui-icon");
+        if (!isChecked) {
+            // 全部选中
+            $selectItem.addClass("checked");
+            $selectAllDom.addClass('checked')
+        } else {
+            // 全部取消选中
+            $selectItem.removeClass("checked")
+            $selectAllDom.removeClass('checked')
+        }
+        minute();
+    });
+
+    // 点击 添加备选课程 弹窗里的单个课程
+    $("#add-course-dialog tbody .select-item").on("click", function(e) {
+        var $target = $(e.currentTarget);
+        var $targetSelectItem = $target.find(".layui-icon");
+        var targetIsChecked = $targetSelectItem.hasClass("checked");
+        if (!targetIsChecked) {
+            $targetSelectItem.addClass('checked');
+        } else {
+            $targetSelectItem.removeClass('checked');
+        }
+        var $allSelectItem = $("#add-course-dialog").find("tbody .select-item .layui-icon");
+        var checkArr = [];
+        for (var i = 0, len = $allSelectItem.length; i < len; i++) {
+            checkArr.push($($allSelectItem[i]).hasClass("checked"));
+        }
+        var isAllChecked = checkArr.filter(function(item) {
+            return !item;
+        });
+        if (!isAllChecked.length) {
+            // 列表项被全部选中，勾选全选状态
+            $("#select-all").find(".layui-icon").addClass("checked");
+        } else {
+            // 列表里存在未选中的项，取消全选状态
+            $("#select-all").find(".layui-icon").removeClass("checked");
+        }
+        minute();
+    });
+
+    // 点击 查看项目通知
+    $("#trainingNotice-btn").on("click", function () {
+        layer.open({
+            skin: 'confirm-dialog',
+            type: 1,
+            closeBtn: 1,
+            shadeClose: false,
+            scrollbar: false,
+            title: '详情',
+            offset: 'auto',
+            area: ['914px', '702px'],
+            resize: false,
+            content: $(".articleDetails"),
+        });
+    });
+
+    var temp_study_status = localStorage.getItem('temp_study_status');
+    if (temp_study_status == 1) {
+        $("#s1").addClass('publichead-active');
+        search(1);
+        localStorage.removeItem('temp_study_status');
+    } else {
+        $("#s2").addClass('publichead-active');
+        search(2);
+    }
+
+    $('.public-head-top ul li').on('click',function() {
+        var i = $(this).index();
+        search(i+1);
+        $(this).addClass('publichead-active').siblings().removeClass('publichead-active');
+    });
+});
+
+function detail(url) {
+    // another = open(url, 'program', 'location=yes,toolbar=yes,fullscreen=no,channelmode=yes,scrollbars=yes,resizable=yes,menubar');
+    another = open(url, 'program');
+}
+
+function detail_open(url) {
+    another = open(url, 'program_open', 'location=yes,toolbar=yes,fullscreen=no,channelmode=yes,scrollbars=yes,resizable=yes,menubar');
+}
+
+// remove course
+function remove(programid, projectid, nowStudyLenth) {
+    $("#studyTipMsg").html('是否删除该课程（删除该课程后，该课程已学学时清空）？');
+    layer.open({
+        skin: 'confirm-dialog',
+        type: 1,
+        closeBtn: 1,
+        shadeClose: false,
+        scrollbar: false,
+        title: '重要提示',
+        offset: 'auto',
+        area: ['500px', '240px'],
+        resize: false,
+        content: $(".studyTip-box"),
+        btnAlign: "c",
+        btn: ['确定', '取消'],
+        yes: function(index, layero) {
+            layer.load(2);
+            var url = "syllabus.php?act=doDelSelect&projectid=" + projectid + "&programid=" + programid + "&tmp=" + Math.random();
+            $.getJSON(
+                url,
+                function(json) {
+                    if (json.status == 1) {
+                        window.location.reload();
+                    } else {
+                        layer.closeAll('loading');
+                        layer.alert(json.message);
+                    }
+                }
+            );
+        }
+    });
+}
+
+// insert course
+function insert() {
+    layer.open({
+        skin: 'confirm-dialog',
+        type: 1,
+        closeBtn: 1,
+        shadeClose: false,
+        scrollbar: false,
+        title: '添加备选课程',
+        offset: 'auto',
+        area: ['900px', '702px'],
+        resize: false,
+        content: $("#add-course-dialog"),
+        btn: ['确定', '取消'],
+        btnAlign: "r",
+        success: function() {
+            minute();
+        },
+        yes: function(index, layero) {
+            var program_ids = selected();
+            if (program_ids.length == 0) {
+                layer.msg('请先选择备选课程');
+                return;
+            }
+            layer.load(2);
+            $.each(program_ids, function(index, item) {
+                console.log(project_id, index, item);
+                var url = "syllabus.php?act=doSelect&projectid=" + project_id + "&programid=" + item + "&tmp=" + Math.random();
+                $.ajax({
+                    async: false,
+                    type: "GET",
+                    url: url,
+                    dataType : 'json',
+                    success: function(json) {
+                        if (json.status >= 1) {} else {
+                            layer.closeAll('loading');
+                        }
+                    }
+                });
+            });
+            localStorage.setItem('temp_study_status', 1);
+            window.location.reload();
+        }
+    });
+}
+
+// get selected id collect
+function selected() {
+    var program_ids = [];
+    var $checkbox_list = $("#select-box").find(".layui-icon.checked");
+    $checkbox_list.each(function(index, item) {
+        program_ids.push($(item).data('id'));
+    });
+    return program_ids;
+}
+
+// get selected minute collect
+function minute() {
+    var minute = 0;
+    var $checkbox_list = $("#select-box").find(".layui-icon.checked");
+    $checkbox_list.each(function(index, item) {
+        var temp = $(item).data('minute');
+        if (temp) {
+            minute += $(item).data('minute');
+        }
+    });
+    $(".add-course-box").remove();
+    var dom = $('<div class="add-course-box"><span id="add-course-number">本次选课 <i>' + minute + '</i> 分钟</span><span id="add-course-data"><i>' + do_select_minute + '</i></span></div>');
+    $(".layui-layer-btn").append(dom);
+}
+
+// 倒计时
+var data = {
+    system: c_time,
+    startTime: project_endtime
+};
+// 初始化计时器
+function initCountDown(timeObject) {
+    // 没有时间参数，退出
+    if (!timeObject) return;
+    var state = checkProjectState(timeObject);
+    // 没有状态参数，退出
+    if (!state) return
+
+    if (state.isFinish) {
+        // 已结束处理逻辑
+        console.log("已结束")
+    } else if (state.isCountDown) {
+        // 48小时内，启动倒计时
+        countDown(timeObject, function(hour, minute, second) {
+            // console.log(hour, minute, second)
+            if(!hour && !minute && !second) {
+                // 计时结束
+                $("#cd").html('');
+            } else {
+                hour = PrefixInteger(hour, 2);
+                minute = PrefixInteger(minute, 2);
+                second = PrefixInteger(second, 2);
+                var hms = hour + ':' + minute + ':' + second;
+                var t = '距离结束还有<span class="countDown-num">'+hms+'</span>';
+                $("#cd").html(t);
+            }
+        });
+    } else if (state.day) {
+        // 有剩余天数，显示还剩多少天
+        console.log("还剩" + state.day + "天");
+        var t = '距离结束还有<span class="countDown-num">'+state.day+'天</span>';
+        $("#cd").html(t);
+    } else {
+        // 大于超过30天
+        console.log("超过30天");
+    }
+}
+
+initCountDown(data);
+
+// search
+function search(study_status = '') {
+    localStorage.setItem('ls_study_status', study_status);
+    console.log('study_status:', study_status);
+    $box = $("#box");
+    var class_collection = [];
+    if (study_status != '') {
+        class_collection.push('.study_status_'+study_status);
+    }
+    if (class_collection.length > 0) {
+        $box.find("tr").hide();
+        var clss = class_collection.join('');
+    } else {
+        var clss = $box.find("tr");
+    }
+    $(clss).show().each(function(index, item) {
+        var i = $(item).find('.list-one .wrap');
+        i.text(index + 1);
+    });
+}
+
+
+
+// custom_dialog
+if (flagp324_status == 0) {
+    setTimeout(custom_dialog, 500);
+}
+function custom_dialog() {
+    layer.open({
+        skin: 'search-dialog',
+        type: 1,
+        closeBtn: 0,
+        shadeClose: false,
+        scrollbar: false,
+        title: '提示',
+        offset: 'auto',
+        area: ['500px', '240px'],
+        resize: false,
+        content: "专题课程已更新，请结合需求进行选学！",
+        btnAlign: "c",
+        btn: ['已知晓'],
+        yes: function(index, layero) {
+            $.ajax({
+                type: "GET",
+                url: '/index.php?act=doCF',
+                data: {
+                    flag: flagp324,
+                },
+                success: function(response) {
+                    layer.close(index);
+                },
+                error: function(data) {
+                }
+            });
+        }
+    });
+}
+// custom_dialog
+
+
+
+// custom_dialog_one
+if (wj_alert == 1) {
+    setTimeout(custom_dialog_one, 500);
+}
+function custom_dialog_one() {
+    layer.open({
+        skin: 'search-dialog',
+        type: 1,
+        closeBtn: 1,
+        shadeClose: false,
+        scrollbar: false,
+        title: '提示',
+        offset: 'auto',
+        area: ['500px', '240px'],
+        resize: false,
+        content: "您已完成规定学时学习，请进入答题页面开始答题！",
+        btnAlign: "c",
+        btn: ['在线答题'],
+        yes: function(index, layero) {
+            layer.close(index);
+            window.open(wj_url);
+        }
+    });
+}
+// custom_dialog_one
+</script>
+
+</body>
+
+</html>
