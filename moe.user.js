@@ -103,7 +103,7 @@
   $(document).ready(function () {
     if (location.pathname === '/syllabus/syllabus.php') {
       list();
-    } else {
+    } else if (location.pathname === '/program/program.php') {
       init();
     }
   });
